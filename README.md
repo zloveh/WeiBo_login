@@ -1,10 +1,10 @@
 # 微博宫格验证码识别  
 准备工作：Python3 + Selenium + Chrome  
 &nbsp;&nbsp;&nbsp;&nbsp;浏览器输入网址*https://passport.weibo.cn/signin/login* ,当输入账号密码点击登录后，有几率会弹出宫格验证码让你验证  
-![如图1]()  
+![如图1](https://github.com/zloveh/WeiBo_login/blob/master/1.png)  
 我们需要通过验证码指示的路线滑动完成，才能完成验证。
 &nbsp;&nbsp;&nbsp;&nbsp;微博宫格验证码识别的思路是：微博宫格验证码共四个宫格, 所以验证码的样式共4*3*2*1 = 24种验证码， 我们可以把这24中验证码截图保存下来成为一个图库  
-![图2]()  
+![图2](https://github.com/zloveh/WeiBo_login/blob/master/2.png)  
 它们的命名方法是根据滑动的顺序，对宫格排序，并把排序的顺序作为图片名字。   
 &nbsp;&nbsp;&nbsp;&nbsp;当我们进行登录时，就把登录时的验证码和图库图片进行比对，如果比对成功就返回它的图片名称，这个名称就是滑动顺序，我们依靠这个顺序进行拖动，完成识别。 
 
